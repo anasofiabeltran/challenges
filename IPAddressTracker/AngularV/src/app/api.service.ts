@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable,AfterViewInit  } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 
@@ -17,3 +17,4 @@ export class ApiService {
   });
   }
 }
+
