@@ -1,6 +1,10 @@
 <div class="Banner">
   <section>
-    <label for="Ip">IP Address Tracker </label>
-    <input id="Ip" type="number" [formControl]="Ip">
+    <form [formGroup]="profileForm" (ngSubmit)="getIP()">
+      <label for="Ip">IP Address Tracker </label>
+      <input id="Ip" type="number" formControlName="Ip">
+      <button  >-></button>
+    </form>
+
   </section>
 </div>

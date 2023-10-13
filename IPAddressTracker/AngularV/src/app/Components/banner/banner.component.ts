@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
-
+import { FormGroup, FormControl } from '@angular/forms';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-banner',
@@ -8,5 +8,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-  Ip = new FormControl('');
+
+  profileForm  = new FormGroup({
+    IpObtain: new FormControl(''),
+  })
+
+  constructor(){
+
+  }
+
+  public getIP(): void{
+    console.log('Ip: formulario:',this.profileForm.value);
+
+  }
+
 }
