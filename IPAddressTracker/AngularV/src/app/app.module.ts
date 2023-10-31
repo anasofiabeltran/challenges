@@ -7,12 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MainComponent } from './components/main/main.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ActionsComponent } from './components/actions/actions.component';
+import { appReducer } from './store/app.reducer';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { ActionsComponent } from './components/actions/actions.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreModule.forRoot({state: appReducer}),
   ],
   providers: [],
   bootstrap: [AppComponent]

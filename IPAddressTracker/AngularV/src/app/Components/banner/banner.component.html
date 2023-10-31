@@ -2,9 +2,10 @@
   <section>
     <form [formGroup]="profileForm" (ngSubmit)="getIP()">
       <label for="Ip">IP Address Tracker </label>
-      <input id="Ip" type="number" formControlName="IpObtain">
-      <button  >-></button>
+      <input id="Ip" type="string" formControlName="IpObtain" value="8.69.103.127">
+      <button>-></button>
     </form>
+
 
   </section>
 </div>
