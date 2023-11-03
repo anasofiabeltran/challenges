@@ -4,6 +4,7 @@ import { Location } from 'src/app/interfaces/location';
 import * as L from 'leaflet';
 import { Store, select } from '@ngrx/store';
 import { tilelayer,addMarker, reset } from 'src/app/services/map.service';
+import { changeIpData } from 'src/app/store/app.actions';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { tilelayer,addMarker, reset } from 'src/app/services/map.service';
   styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FooterComponent  {
+export class FooterComponent implements OnInit {
 
   private map: any;
   private locationIP!: Location;
@@ -25,17 +26,19 @@ export class FooterComponent  {
 
   ngOnInit(): void {
     this.state.select('state').subscribe((data)=>{
-      console.log('IP',data.IP)
-
 
       if(this.container != null){
         this.container._leaflet_id = null;
       }
+
         this.apiService.changeCoordinates(data.IP).subscribe((data) => {
-          this.locationIP = data;
+
+          console.log(data);
+          this.state.dispatch(changeIpData({value:data}));
           tilelayer(this.map);
           addMarker(this.map,this.locationIP.location.lat, this.locationIP.location.lng);
         })
+
     })
   }
 

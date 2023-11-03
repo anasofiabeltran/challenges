@@ -18,7 +18,6 @@ export class APIService {
   }
 */
   changeCoordinates(IP: any):Observable<Location>{
-    console.log('ip',IP)
     return this.http.get<Location>('https://geo.ipify.org/api/v2/country,city?apiKey=at_SPZjvAljqcEknV5yrG7R2d1uVm1E6&ipAddress='+IP)
   }
 

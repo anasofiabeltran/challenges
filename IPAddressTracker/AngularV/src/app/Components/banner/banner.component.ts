@@ -21,7 +21,6 @@ export class BannerComponent {
   constructor(private state: Store<{state: object}>){}
 
   public getIP(): void{
-    console.log(this.profileForm.value);
     this.state.dispatch(changeIp({ value:this.profileForm.value.IpObtain }))
 
   }

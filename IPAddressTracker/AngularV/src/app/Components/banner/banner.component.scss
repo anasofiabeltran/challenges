@@ -1,0 +1,30 @@
+.Banner{
+  background-image: url("../../../assets/img/pattern-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3rem;
+  position: relative;
+}
+
+.Banner form{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.Banner form div input,
+.Banner form div button{
+  height: 30px;
+  border: 1px transparent solid;
+  border-radius: 4px;
+}
+
+.Banner form div button{
+  background-color: gray;
+  width: 40px;
+}

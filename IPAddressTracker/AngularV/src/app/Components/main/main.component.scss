@@ -1,0 +1,17 @@
+.Main{
+
+}
+
+.Main section{
+  top: 8rem;
+  left: calc(50% - 364px);
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 100px;
+  background-color: white;
+  gap: 2rem;
+  border: 1px transparent solid;
+  border-radius: 4px;
+  z-index: 1;
+}
