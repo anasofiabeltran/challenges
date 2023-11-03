@@ -18,11 +18,11 @@ export class BannerComponent {
     IpObtain: new FormControl(),
   })
 
-  constructor(private store: Store<{state: {state: object}}>){}
+  constructor(private state: Store<{state: object}>){}
 
   public getIP(): void{
     console.log(this.profileForm.value);
-    this.store.dispatch(changeIp({ value:this.profileForm.value.IpObtain }))
+    this.state.dispatch(changeIp({ value:this.profileForm.value.IpObtain }))
 
   }
 
