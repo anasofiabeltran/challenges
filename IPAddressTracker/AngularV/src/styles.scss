@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -8,4 +9,7 @@
   height: 81vh;
  }
 
-
+button,
+input{
+  cursor: pointer;
+}

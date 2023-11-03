@@ -12,7 +12,7 @@
 .Banner form{
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 1000px;
   gap: 1rem;
   margin-bottom: 20px;
   color: white;
@@ -21,6 +21,7 @@
 .Banner form div input,
 .Banner form div button{
   height: 30px;
+  width: 20rem;
   border: 1px transparent solid;
   border-radius: 4px;
 }
