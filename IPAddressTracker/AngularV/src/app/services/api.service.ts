@@ -10,15 +10,15 @@ import { Location } from '../interfaces/location';
 export class APIService {
 
   constructor(private http: HttpClient) { }
-/*
-  getInfo(){
-    this.http.get('https://geo.ipify.org/api/v2/country,city?apiKey=at_SPZjvAljqcEknV5yrG7R2d1uVm1E6&ipAddress='+initialState.IP).subscribe(data=>{
+
+
+  changeCoordinates(IP: any):Observable<Location>{
+    /*
+    this.http.get('https://api.ipgeolocation.io/ipgeo?apiKey=1d96ed06e394464a9e16f3cfe37b19b0&ip='+IP).subscribe(data=>{
       console.log(data);
     })
-  }
-*/
-  changeCoordinates(IP: any):Observable<Location>{
-    return this.http.get<Location>('https://geo.ipify.org/api/v2/country,city?apiKey=at_SPZjvAljqcEknV5yrG7R2d1uVm1E6&ipAddress='+IP)
+    */
+    return this.http.get<Location>('https://api.ipgeolocation.io/ipgeo?apiKey=1d96ed06e394464a9e16f3cfe37b19b0&ip='+IP)
   }
 
 }

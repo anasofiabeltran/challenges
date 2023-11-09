@@ -32,11 +32,9 @@ export class FooterComponent implements OnInit {
       }
 
         this.apiService.changeCoordinates(data.IP).subscribe((data) => {
-
-          console.log(data);
           this.state.dispatch(changeIpData({value:data}));
           tilelayer(this.map);
-          addMarker(this.map,this.locationIP.location.lat, this.locationIP.location.lng);
+          addMarker(this.map,data);
         })
 
     })

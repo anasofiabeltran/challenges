@@ -7,7 +7,7 @@ export function tilelayer(myMap: any) {
   }).addTo(myMap);
 }
 
-export const addMarker = (myMap:any,X:any,Y:any) => L.marker([X, Y])
+export const addMarker = (myMap:any,location:any) => L.marker([location.latitude, location.longitude])
   .addTo(myMap)
   .bindPopup('A pretty CSS popup.<br> Easily customizable.')
   .openPopup();
